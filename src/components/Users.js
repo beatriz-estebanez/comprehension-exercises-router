@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Users extends Component {
-  render() {
-    return (
-      <div>
-        <h2>Users</h2>
-        <p> My awesome Users component </p>
-      </div>
-    );
-  }
-};
+const Users = (props) => {
+  const { id } = props.match.params;
+  const { greetingMessage } = props;
+  return (
+    <div>
+      <h2> Users </h2>
+      <p> {greetingMessage}, id={id}, this is my awesome Users component </p>
+    </div>
+  );
+}
 
 export default Users;
